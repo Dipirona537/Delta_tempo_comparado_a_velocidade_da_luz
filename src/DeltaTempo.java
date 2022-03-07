@@ -12,7 +12,7 @@ public class DeltaTempo {
         System.out.println("Digite o tempo que deseja saber");
         T = sc.nextDouble();
         if (T < 0) {
-            System.out.println("Não existe tempo negativo");
+            System.out.println("Não existe tempo negativo.");
             System.exit(0);
         }
         switch (escolha) {

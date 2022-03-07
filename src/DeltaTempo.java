@@ -19,7 +19,7 @@ public class DeltaTempo {
             case 'p' -> {
                 System.out.println("Digite a velocidade do corpo comparada em porcentagem a da luz");
                 double porcentagemluz = sc.nextDouble();
-                if (porcentagemluz < 0 || porcentagemluz > 100) {
+                if (porcentagemluz < 0) {
                     System.out.println("Velocidade impossível");
                     System.exit(0);
                 }
@@ -29,6 +29,7 @@ public class DeltaTempo {
                     System.out.println("A velocidade comparativa é igual a luz, impossível realizar esta operação. ("+deltaT+")");
                     System.exit(0);
                 }
+                System.out.format("A diferença de tempo é %.8f", deltaT);
             }
             case 'm' -> {
                 System.out.println("Digite a velocidade do corpo em m/s");
@@ -37,12 +38,12 @@ public class DeltaTempo {
                     System.out.println("Velocidade impossível");
                     System.exit(0);
                 }
-                VelocidadeComparativa = velocidadems;
-                deltaT = T / (1 - (VelocidadeComparativa / luz));
-                if (VelocidadeComparativa == luz) {
+                deltaT = T / (1 - (velocidadems/ luz));
+                if (velocidadems == luz) {
                     System.out.println("A velocidade comparativa é igual a luz, impossível realizar esta operação.("+deltaT+")");
                     System.exit(0);
                 }
+                System.out.format("A diferença de tempo é %.8f", deltaT);
             }
             case 'v' -> {
                 System.out.println("Digite a velocidade do corpo em m/s");
@@ -51,9 +52,8 @@ public class DeltaTempo {
                     System.out.println("Velocidade impossível");
                     System.exit(0);
                 }
-                VelocidadeComparativa = velocidadems;
-                deltaT = T / (1 - (VelocidadeComparativa / luz));
-                if (VelocidadeComparativa == luz) {
+                deltaT = T / (1 - (velocidadems / luz));
+                if (velocidadems == luz) {
                     System.out.println("A velocidade comparativa é igual a luz, impossível realizar esta operação.");
                     System.exit(0);
                 }

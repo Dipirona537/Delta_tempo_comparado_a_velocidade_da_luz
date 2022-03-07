@@ -24,7 +24,7 @@ public class DeltaTempo {
                     System.exit(0);
                 }
                 VelocidadeComparativa = luz * (porcentagemluz / 100);
-                deltaT = T / (1 - (VelocidadeComparativa / luz));
+                deltaT = T / Math.sqrt((1 - (Math.pow(VelocidadeComparativa, 2)) / (Math.pow(luz, 2))));
                 if (VelocidadeComparativa >= luz) {
                     System.out.println("A velocidade comparativa é igual ou maior que a luz, impossível realizar esta operação. ("+deltaT+")");
                     System.exit(0);
@@ -38,7 +38,7 @@ public class DeltaTempo {
                     System.out.println("Velocidade impossível");
                     System.exit(0);
                 }
-                deltaT = T / (1 - (velocidadems/ luz));
+                deltaT = T / Math.sqrt((1 - (Math.pow(velocidadems, 2)) / (Math.pow(luz, 2))));
                 if (velocidadems >= luz) {
                     System.out.println("A velocidade comparativa é igual ou maior que a luz, impossível realizar esta operação.("+deltaT+")");
                     System.exit(0);
@@ -52,7 +52,7 @@ public class DeltaTempo {
                     System.out.println("Velocidade impossível");
                     System.exit(0);
                 }
-                deltaT = T / (1 - (velocidadems / luz));
+                deltaT = T / Math.sqrt((1 - (Math.pow(velocidadems, 2)) / (Math.pow(luz, 2))));
                 if (velocidadems >= luz) {
                     System.out.println("A velocidade comparativa é igual ou maior que a luz, impossível realizar esta operação.");
                     System.exit(0);
